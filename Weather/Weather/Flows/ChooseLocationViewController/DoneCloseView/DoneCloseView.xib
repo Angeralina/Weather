@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoneCloseView" customModule="Weather" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeN-pq-Ghv">
+                    <rect key="frame" x="20" y="139" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OeN-pq-Ghv" secondAttribute="height" id="Egh-0A-ruE"/>
+                        <constraint firstAttribute="height" constant="44" id="GvQ-Qt-fLS"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="bhH-Rc-U50"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryf-CQ-7bP">
+                    <rect key="frame" x="329" y="139" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ryf-CQ-7bP" secondAttribute="height" id="2nv-yH-ajh"/>
+                        <constraint firstAttribute="height" constant="44" id="Ms4-fE-ExV"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="checkmark" catalog="system" symbolScale="medium"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="done:" destination="-1" eventType="touchUpInside" id="PQi-WK-qlF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ryf-CQ-7bP" secondAttribute="trailing" constant="20" id="1BS-Eq-mjh"/>
+                <constraint firstAttribute="bottom" secondItem="OeN-pq-Ghv" secondAttribute="bottom" constant="20" id="FCY-oo-kPp"/>
+                <constraint firstAttribute="bottom" secondItem="Ryf-CQ-7bP" secondAttribute="bottom" constant="20" id="dSD-BL-f1D"/>
+                <constraint firstItem="OeN-pq-Ghv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="svc-jB-gE4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="87.786259541984734" y="-229.92957746478874"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

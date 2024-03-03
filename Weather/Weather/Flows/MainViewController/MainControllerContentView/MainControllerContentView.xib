@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainControllerContentView" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="contentTop" destination="xgT-Fz-3He" id="2dB-k4-IJj"/>
+                <outlet property="degLabel" destination="H1S-qb-SLa" id="EG7-kS-1as"/>
+                <outlet property="discriptionLabel" destination="wqa-MV-Z6d" id="T8c-vx-pUJ"/>
+                <outlet property="minusView" destination="TS9-y6-DRm" id="XQR-v7-M1Q"/>
+                <outlet property="weatherIconImageView" destination="Q9L-cp-BA0" id="gKf-x4-okE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="xas-HQ-jqm">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqa-MV-Z6d">
+                    <rect key="frame" x="134.33333333333334" y="304" width="124.33333333333334" height="36"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="30"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1S-qb-SLa">
+                    <rect key="frame" x="175" y="233" width="43" height="60"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="50"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-day" translatesAutoresizingMaskIntoConstraints="NO" id="Q9L-cp-BA0">
+                    <rect key="frame" x="176.66666666666666" y="364" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4ir-h0-3FA"/>
+                        <constraint firstAttribute="width" constant="40" id="N5Y-fN-LLy"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deg" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-F5-g0a">
+                    <rect key="frame" x="218" y="233" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="VGR-fK-ENL"/>
+                        <constraint firstAttribute="width" secondItem="7Rf-F5-g0a" secondAttribute="height" id="kg0-5u-vyg"/>
+                    </constraints>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS9-y6-DRm">
+                    <rect key="frame" x="155" y="261" width="15" height="4"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="9gq-Kp-DjT"/>
+                        <constraint firstAttribute="width" constant="15" id="A35-rP-0Af"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xas-HQ-jqm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6H5-kx-7e6"/>
+                <constraint firstItem="Q9L-cp-BA0" firstAttribute="top" secondItem="wqa-MV-Z6d" secondAttribute="bottom" constant="24" id="7dQ-bO-H69"/>
+                <constraint firstItem="H1S-qb-SLa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Kl-07-Gco"/>
+                <constraint firstItem="Q9L-cp-BA0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="931-4O-KTN"/>
+                <constraint firstAttribute="bottom" secondItem="xas-HQ-jqm" secondAttribute="bottom" id="BBv-R3-Ohj"/>
+                <constraint firstItem="xas-HQ-jqm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="G3c-D3-kEd"/>
+                <constraint firstItem="TS9-y6-DRm" firstAttribute="centerY" secondItem="H1S-qb-SLa" secondAttribute="centerY" id="GfA-mE-FzX"/>
+                <constraint firstItem="H1S-qb-SLa" firstAttribute="leading" secondItem="TS9-y6-DRm" secondAttribute="trailing" constant="5" id="ORO-Il-Wr6"/>
+                <constraint firstItem="wqa-MV-Z6d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZNN-tz-ZIj"/>
+                <constraint firstItem="7Rf-F5-g0a" firstAttribute="top" secondItem="H1S-qb-SLa" secondAttribute="top" id="aX7-2A-uKd"/>
+                <constraint firstItem="7Rf-F5-g0a" firstAttribute="leading" secondItem="H1S-qb-SLa" secondAttribute="trailing" id="dOG-0t-pmA"/>
+                <constraint firstAttribute="trailing" secondItem="xas-HQ-jqm" secondAttribute="trailing" id="r8w-oD-7yv"/>
+                <constraint firstItem="H1S-qb-SLa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="233" id="xgT-Fz-3He"/>
+                <constraint firstItem="wqa-MV-Z6d" firstAttribute="top" secondItem="H1S-qb-SLa" secondAttribute="bottom" constant="11" id="yoe-PH-TOI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="848" height="1287"/>
+        <image name="cloudy-day" width="512" height="512"/>
+        <image name="deg" width="54" height="54"/>
+    </resources>
+</document>

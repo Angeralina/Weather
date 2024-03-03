@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoSettingsView" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="alertBodyView" destination="ypS-0P-veW" id="vzx-5h-CwO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypS-0P-veW">
+                    <rect key="frame" x="64" y="360" width="265" height="132"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJa-xT-iKG">
+                            <rect key="frame" x="0.0" y="87" width="265" height="1"/>
+                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="qcN-31-Xwj"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9D-is-qAA">
+                            <rect key="frame" x="32.666666666666686" y="88" width="200" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="NFH-TE-WtF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="Go Settings">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="open:" destination="-1" eventType="touchUpInside" id="7mr-CG-ytB"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather needs access to your location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72u-BQ-2eO">
+                            <rect key="frame" x="10" y="8" width="245" height="40.666666666666664"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To start, please allow access to your location in the settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94J-Vb-Pey">
+                            <rect key="frame" x="10" y="54.666666666666693" width="245" height="26.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.77647058823529413" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="94J-Vb-Pey" secondAttribute="trailing" constant="10" id="2YI-Bm-Htg"/>
+                        <constraint firstItem="72u-BQ-2eO" firstAttribute="leading" secondItem="ypS-0P-veW" secondAttribute="leading" constant="10" id="5bf-tQ-HBK"/>
+                        <constraint firstAttribute="trailing" secondItem="72u-BQ-2eO" secondAttribute="trailing" constant="10" id="Clp-h9-LaP"/>
+                        <constraint firstAttribute="width" constant="265" id="DAB-AN-lqo"/>
+                        <constraint firstAttribute="trailing" secondItem="yJa-xT-iKG" secondAttribute="trailing" id="HjF-l2-IWu"/>
+                        <constraint firstItem="94J-Vb-Pey" firstAttribute="leading" secondItem="ypS-0P-veW" secondAttribute="leading" constant="10" id="N2D-kY-jGt"/>
+                        <constraint firstItem="i9D-is-qAA" firstAttribute="top" secondItem="yJa-xT-iKG" secondAttribute="bottom" id="VnM-Yn-hwN"/>
+                        <constraint firstItem="yJa-xT-iKG" firstAttribute="top" secondItem="94J-Vb-Pey" secondAttribute="bottom" constant="6" id="eoF-wG-Mbg"/>
+                        <constraint firstItem="yJa-xT-iKG" firstAttribute="leading" secondItem="ypS-0P-veW" secondAttribute="leading" id="esm-jK-cCL"/>
+                        <constraint firstAttribute="bottom" secondItem="i9D-is-qAA" secondAttribute="bottom" id="krN-6j-Oac"/>
+                        <constraint firstItem="72u-BQ-2eO" firstAttribute="top" secondItem="ypS-0P-veW" secondAttribute="top" constant="8" id="mrY-bt-Al6"/>
+                        <constraint firstAttribute="bottom" secondItem="yJa-xT-iKG" secondAttribute="bottom" constant="44" id="pgx-gX-wGB"/>
+                        <constraint firstItem="94J-Vb-Pey" firstAttribute="top" secondItem="72u-BQ-2eO" secondAttribute="bottom" constant="6" id="swe-18-WOL"/>
+                        <constraint firstItem="i9D-is-qAA" firstAttribute="centerX" secondItem="ypS-0P-veW" secondAttribute="centerX" id="xCq-e5-y2t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34157100340136054" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="ypS-0P-veW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vxs-z1-2Mb"/>
+                <constraint firstItem="ypS-0P-veW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rEb-CC-eLo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-1.4084507042253522"/>
+        </view>
+    </objects>
+</document>
